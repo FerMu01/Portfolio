@@ -1,0 +1,163 @@
+/**
+ * CSS TOKENS — Sistema de diseño del portfolio
+ * Variables globales: colores, tipografía, espaciado, sombras, glassmorphism y transiciones.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* ── Colores base y fondos profundos ───────────────── */
+  /* ── Colores base y fondos profundos neutros (sin tono azulado) ── */
+  --color-bg-primary:     #08080a;
+  --color-bg-secondary:   #0d0d10;
+  --color-bg-tertiary:    #121216;
+  --color-bg-card:        rgba(16, 16, 20, 0.45);
+  --color-bg-hover:       rgba(28, 28, 36, 0.65);
+
+  /* ── Glassmorphism Tokens Refinados de Alta Definición ───────────── */
+  --glass-bg:             rgba(16, 18, 24, 0.55);
+  --glass-bg-elevated:    rgba(22, 26, 36, 0.68);
+  --glass-border:         rgba(255, 255, 255, 0.12);
+  --glass-border-hover:   rgba(255, 255, 255, 0.28);
+  --glass-border-glow:    rgba(255, 255, 255, 0.35);
+  --glass-blur:           blur(16px);
+  --glass-blur-sm:        blur(8px);
+  --glass-shadow:         0 16px 40px -10px rgba(0, 0, 0, 0.65), inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
+  --glass-shadow-glow:    0 0 24px rgba(255, 255, 255, 0.12);
+
+  /* ── Gradientes Tecnológicos ───────────────────────── */
+  --grad-primary:         linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  --grad-sandia:          linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  --grad-cyan:            linear-gradient(135deg, #00f0ff 0%, #38bdf8 100%);
+
+  /* ── Colores de acento vivos & tecnológicos ───────── */
+  --color-accent:         #f8fafc;
+  --color-accent-dim:     #cbd5e1;
+  --color-accent-glow:    rgba(255, 255, 255, 0.15);
+  --color-accent-border:  rgba(255, 255, 255, 0.2);
+
+  /* ── Color Amarillo Tecnológico Destacado (anteriormente sandía) ─── */
+  --color-sandia:         #fbbf24;
+  --color-sandia-hover:   #f59e0b;
+  --color-sandia-glow:    rgba(251, 191, 36, 0.35);
+  --color-sandia-bg:      rgba(251, 191, 36, 0.12);
+  --color-sandia-border:  rgba(251, 191, 36, 0.48);
+  --color-sandia-text:    #fef08a;
+
+  --color-purple:         #b026ff;
+  --color-purple-glow:    rgba(176, 38, 255, 0.25);
+  --color-emerald:        #00ff9d;
+  --color-emerald-glow:   rgba(0, 255, 157, 0.25);
+  --color-cyan:           #00f0ff;
+  --color-cyan-glow:      rgba(0, 240, 255, 0.25);
+  --color-amber:          #ffb703;
+  --color-amber-glow:     rgba(255, 183, 3, 0.25);
+  --color-pink:           #ff4d6d;
+
+  /* ── Color de marca Spocky refinado ───────────────── */
+  --color-brand:          #ffffff;
+  --color-brand-dim:      #e2e8f0;
+  --color-brand-muted:    rgba(255, 255, 255, 0.09);
+  --color-brand-border:   rgba(255, 255, 255, 0.2);
+  --color-brand-text:     #08080a;
+
+  /* ── Texto ────────────────────────────────────────── */
+  --color-text-primary:   #f8fafc;
+  --color-text-secondary: #94a3b8;
+  --color-text-tertiary:  #64748b;
+  --color-text-accent:    #ffffff;
+  --color-text-inverse:   #08080a;
+
+  /* ── Bordes ───────────────────────────────────────── */
+  --color-border:         rgba(255, 255, 255, 0.08);
+  --color-border-hover:   rgba(255, 255, 255, 0.2);
+  --color-border-accent:  rgba(255, 255, 255, 0.35);
+
+  /* ── Estados / semántica ──────────────────────────── */
+  --color-success:        #10b981;
+  --color-warning:        #f59e0b;
+  --color-error:          #ef4444;
+  --color-info:           #38bdf8;
+
+  /* ── Tipografía ───────────────────────────────────── */
+  --font-sans:  'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono:  'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+
+  --text-xs:    0.75rem;   /* 12px */
+  --text-sm:    0.875rem;  /* 14px */
+  --text-base:  1rem;      /* 16px */
+  --text-md:    1.125rem;  /* 18px */
+  --text-lg:    1.25rem;   /* 20px */
+  --text-xl:    1.5rem;    /* 24px */
+  --text-2xl:   2rem;      /* 32px */
+  --text-3xl:   2.5rem;    /* 40px */
+  --text-4xl:   3.25rem;   /* 52px */
+  --text-5xl:   4rem;      /* 64px */
+
+  --weight-light:    300;
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+  --weight-black:    800;
+
+  --leading-tight:   1.2;
+  --leading-snug:    1.35;
+  --leading-normal:  1.6;
+  --leading-relaxed: 1.75;
+
+  /* ── Espaciado ────────────────────────────────────── */
+  --space-1:   0.25rem;   /*  4px */
+  --space-2:   0.5rem;    /*  8px */
+  --space-3:   0.75rem;   /* 12px */
+  --space-4:   1rem;      /* 16px */
+  --space-5:   1.25rem;   /* 20px */
+  --space-6:   1.5rem;    /* 24px */
+  --space-8:   2rem;      /* 32px */
+  --space-10:  2.5rem;    /* 40px */
+  --space-12:  3rem;      /* 48px */
+  --space-16:  4rem;      /* 64px */
+  --space-20:  5rem;      /* 80px */
+  --space-24:  6rem;      /* 96px */
+  --space-32:  8rem;      /* 128px */
+
+  /* ── Layout ───────────────────────────────────────── */
+  --container-sm:   640px;
+  --container-md:   768px;
+  --container-lg:   1024px;
+  --container-xl:   1280px;
+  --container-2xl:  1400px;
+
+  --header-height:  68px;
+
+  /* ── Bordes redondeados ────────────────────────────── */
+  --radius-sm:   6px;
+  --radius-md:   10px;
+  --radius-lg:   14px;
+  --radius-xl:   18px;
+  --radius-2xl:  26px;
+  --radius-full: 9999px;
+
+  /* ── Sombras ──────────────────────────────────────── */
+  --shadow-sm:   0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md:   0 4px 20px rgba(0, 0, 0, 0.5);
+  --shadow-lg:   0 10px 36px rgba(0, 0, 0, 0.6);
+  --shadow-xl:   0 20px 54px rgba(0, 0, 0, 0.75);
+  --shadow-accent: 0 0 28px rgba(96, 165, 250, 0.25);
+
+  /* ── Transiciones ─────────────────────────────────── */
+  --transition-fast:   150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base:   250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow:   400ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-spring: 350ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── Z-index ──────────────────────────────────────── */
+  --z-below:    -1;
+  --z-base:      0;
+  --z-raised:   10;
+  --z-dropdown: 100;
+  --z-sticky:   200;
+  --z-overlay:  300;
+  --z-modal:    400;
+  --z-toast:    500;
+}

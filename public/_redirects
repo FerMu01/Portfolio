@@ -1,0 +1,8 @@
+/*
+  Cloudflare Pages — SPA redirect rule.
+  Redirige todas las rutas desconocidas a index.html
+  para que React Router maneje la navegación del lado del cliente.
+  
+  Documentación: https://developers.cloudflare.com/pages/configuration/redirects/
+*/
+/* = 200
